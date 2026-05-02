@@ -57,12 +57,15 @@ export default class GameScene extends Phaser.Scene {
             repeat: -1
         });
 
-        this.anims.create({
-            key: 'explode',
-            frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 8 }),
-            frameRate: 15,
-            hideOnComplete: true
-        });
+        // Only create explosion anim if texture loaded correctly
+        if (this.textures.exists('explosion')) {
+            this.anims.create({
+                key: 'explode',
+                frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 8 }),
+                frameRate: 15,
+                hideOnComplete: true
+            });
+        }
 
         // Player (physics enabled)
         this.player = this.physics.add.sprite(this.width / 2, this.height - 100, 'player_full');
@@ -239,7 +242,12 @@ export default class GameScene extends Phaser.Scene {
 
     createExplosion(x, y) {
         let explosion = this.add.sprite(x, y, 'explosion');
-        explosion.play('explode');
+        if (this.anims.exists('explode')) {
+            explosion.play('explode');
+        } else {
+            // Fallback: just destroy the sprite if animation doesn't exist
+            explosion.destroy();
+        }
     }
 
 }
