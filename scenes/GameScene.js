@@ -17,13 +17,13 @@ export default class GameScene extends Phaser.Scene {
         this.load.spritesheet('engine_powering', 'Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Engine Effects/PNGs/Main Ship - Engines - Base Engine - Powering.png', { frameWidth: 48, frameHeight: 48 });
 
         // Enemies & Obstacles
-        this.load.image('enemy', 'Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Designs - Base/PNGs/Nautolan - Scout - Base.png');
+        this.load.image('enemy', 'Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Designs - Base/PNGs/Nautolan Ship - Scout - Base.png');
         this.load.image('asteroid', 'Foozle_2DS0015_Void_EnvironmentPack/Asteroids/PNGs/Asteroid 01 - Base.png');
-        this.load.spritesheet('explosion', 'Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Destruction/PNGs/Nautolan - Scout - Destruction.png', { frameWidth: 64, frameHeight: 64 });
+        this.load.spritesheet('explosion', 'Foozle_2DS0014_Void_EnemyFleet_3/Nautolan/Destruction/PNGs/Nautolan Ship - Scout.png', { frameWidth: 64, frameHeight: 64 });
 
         // Backgrounds (Parallax)
-        this.load.image('bg_void', 'Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background - Layer 01 - Void.png');
-        this.load.image('bg_stars', 'Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background - Layer 02 - Stars.png');
+        this.load.image('bg_void', 'Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png');
+        this.load.image('bg_stars', 'Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png');
 
         // Audio
         this.load.audio('gameMusic', 'Loops/mp3/Sci-Fi 1 Loop.mp3');
