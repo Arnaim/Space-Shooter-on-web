@@ -30,7 +30,7 @@ export default class MenuScene extends Phaser.Scene {
 
         this.input.on('pointerdown', () => {
             this.music.stop();
-            this.scene.start('GameScene');
+            this.scene.start('StageSelectScene');
         });
     }
 }
